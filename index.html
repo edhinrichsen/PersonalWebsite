@@ -15,16 +15,30 @@
   <meta name="og:description" content="Edward Hinrichsen - personal website">
 
   <link rel="apple-touch-icon" href="icon.png">
+  <script src="js/main.js"></script>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Raleway&display=swap"
     rel="stylesheet">
 
 </head>
 
 <body>
-  <div id="contactLink"><a href="#Contact">contact</a></div>
+  <input id="menuToggle" type="checkbox">
+  <div id="menu"></div>
+  <div id="l1" class="l"><a href="#aboutMe" onclick="closeMenu()">About Me</a></div>
+  <div id="l2" class="l"><a href="#mySkills" onclick="closeMenu()">My Skills</a></div>
+  <div id="l3" class="l"><a href="#myProjects" onclick="closeMenu()">My Projects</a></div>
+  <div id="l4" class="l"><a href="#contact" onclick="closeMenu()">Contact Me</a></div>
+  <div id="menuButtons">
+    <a href="#" onclick="toggleMenu()"><img height="100%" src="img/menu-icon.svg" alt="Menu" title="Menu"></a>
+    <a href="EdwardHinrichsen-Resume.pdf"><img height="100%" src="img/r-icon.svg" alt="Resume" title="Resume"></a>
+    <a href="https://github.com/edhinrichsen"><img height="100%" src="img/git-icon.svg" alt="GitHub" title="GitHub"></a>
+  </div>
+
+  <div id="contactLink"><a href="#contact">contact</a></div>
   <div id="landing">
     <div id="topImage"></div>
     <div id="title">
@@ -35,94 +49,110 @@
     </div>
   </div>
   <div id="content">
-    <h1>Hi there,</h1>
+    <h1 id="aboutMe">Hi there,</h1>
     <p>
-      Hi there, my name is Edward, I am currently studying a Bachelor of Science, majoring in Computer Science at the University of Melbourne. I have a passion for all things technology, from software engineering & algorithms to machine learning & data science. 
+      my name is Edward, I am currently studying a Bachelor of Science, majoring in Computer Science at the University
+      of Melbourne. I have a passion for all things technology, from software engineering & algorithms to machine
+      learning & data science.
     </p>
     <p class="lessImportant">
-      In addition to my love of technology, I am also interested in design, 3D graphics, politics and economics. When not studying or coding, I am in the pool helping kids with autism spectrum disorder and other disabilities learn to swim.    </p>
-    <p>
-      Below is a list of my technical and programming language skills and examples of projects I have developed over my ten years of coding experience.
+      In addition to my love of technology, I am also interested in design, 3D graphics, politics and economics. When
+      not studying or coding, I am in the pool helping kids with autism spectrum disorder and other disabilities learn
+      to swim.
     </p>
     <br><br>
-    <h1>My skills</h1>
+    <div id="resumeLink">
+      <a href="EdwardHinrichsen-Resume.pdf"><img style="display:inline-table" width="64px" src="img/r-icon.svg"
+          alt="Resume" title="Resume">
+        <div id="resumeLinkText">Here is my<br><b>Resume</b></div>
+      </a>
+    </div>
+    <br><br>
+    <p>
+      Below is a list of my technical and programming language skills and examples of projects I have developed over my
+      ten years of coding experience.
+    </p>
+    <br><br>
+    <h1 id="mySkills">My Skills</h1>
     <div id=skillSet>
-    <div class="skill">
-      <h4>Python</h4>
-      <ul>
-        <li>Scripting</li>
-        <li>Webcraling & Scraping</li>
-        <li>Data Processing</li>
-        <li>Numpy & Pandas</li>
-        <li>Scikit-learn</li>
-      </ul>
+      <div class="skill">
+        <h4>Python</h4>
+        <ul>
+          <li>Scripting</li>
+          <li>Webcraling & Scraping</li>
+          <li>Data Processing</li>
+          <li>Numpy & Pandas</li>
+          <li>Scikit-learn</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>C</h4>
+        <ul>
+          <li>Algorithms & Data Structures</li>
+          <li>Sorting</li>
+          <li>Transitive Closure</li>
+          <li>Graph Traversal</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>Java</h4>
+        <ul>
+          <li>Object Oriented Design and Programming</li>
+          <li>GRASP & Gang of Four Patterns</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>MySQL</h4>
+        <ul>
+          <li>SQL Queries</li>
+          <li>Relational Databases</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>Vala & GTK</h4>
+        <ul>
+          <li>User Interface Development</li>
+          <li>Application Development</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>HTML, CSS & JavaScript</h4>
+        <ul>
+          <li>Website Design & Development</li>
+          <li>Web Scripting</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>Linux</h4>
+        <ul>
+          <li>Experience with Debian Based Systems & Unix Shell (Bash)</li>
+          <li>Use Linux as my Main System (Elementary OS)</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>3D Graphics</h4>
+        <ul>
+          <li>Blender: Modeling, Texturing, Lighting & Rendering</li>
+          <li>Rhinoceros 3D: NURB modeling & Parametric Design</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h4>Adobe<br>Creative Cloud</h4>
+        <ul>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>Some Indesign</li>
+        </ul>
+      </div>
     </div>
-    <div class="skill">
-      <h4>C</h4>
-      <ul>
-        <li>Algorithms & Data Structures</li>
-        <li>Sorting</li>
-        <li>Transitive Closure</li>
-        <li>Graph Traversal</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>Java</h4>
-      <ul>
-        <li>Object Oriented Design and Programming</li>
-        <li>GRASP & Gang of Four Patterns</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>MySQL</h4>
-      <ul>
-        <li>SQL Queries</li>
-        <li>Relational Databases</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>Vala & GTK</h4>
-      <ul>
-        <li>User Interface Development</li>
-        <li>Application Development</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>HTML, CSS & JavaScript</h4>
-      <ul>
-        <li>Website Design & Development</li>
-        <li>Web Scripting</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>Linux</h4>
-      <ul>
-        <li>Experience with Debian Based Systems & Unix Shell (Bash)</li>
-        <li>Use Linux as my Main System (Elementary OS)</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>3D Graphics</h4>
-      <ul>
-        <li>Blender: Modeling, Texturing, Lighting & Rendering</li>
-        <li>Rhinoceros 3D: NURB modeling & Parametric Design</li>
-      </ul>
-    </div>
-    <div class="skill">
-      <h4>Adobe<br>Creative Cloud</h4>
-      <ul>
-        <li>Photoshop</li>
-        <li>Illustrator</li>
-        <li>Some Indesign</li>
-      </ul>
-    </div>
-  </div>
- 
-
 
     <br><br>
-    <div id="Contact"></div>
-    <h1>Contact</h1>
+
+    <h1 id="myProjects">My Projects</h1>
+    <p style="text-align: center">email: <b>edward.w.hinrichsen@gmail.com</b></p>
+
+    <br><br>
+    <h1 id="contact">Contact</h1>
     <p style="text-align: center">email: <b>edward.w.hinrichsen@gmail.com</b></p>
   </div>
 
