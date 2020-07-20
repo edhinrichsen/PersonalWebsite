@@ -1,0 +1,133 @@
+#menuToggle {
+    position: fixed;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    left: 0px;
+    display: none;
+}
+
+#menuToggle:checked {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 4;
+    display: inline;
+    opacity: 0;
+}
+
+#menuButtons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0.7;
+    transition: opacity 0.3s, height 0.7s, width 0.7s, left 0.3s, top 0.3s;
+    height: 32px;
+    width: 150px;
+}
+
+#menuButtons img {
+    margin-right: 10%;
+}
+
+#menuButtons:hover {
+    opacity: 1;
+}
+
+#menuToggle:checked~#menuButtons {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 5;
+    opacity: 1;
+    height: 48px;
+    width: 500px;
+}
+
+#menu {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: -100vw;
+    right: 120vw;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s, right 0.7s, left 0.3s;
+}
+
+#menuToggle:checked~#menu {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.l {
+    position: fixed;
+    z-index: 6;
+    left: -120vw;
+    font-size: 3em;
+    padding-left: 0px;
+    color: #222a2f;
+    font-family: 'Playfair Display', serif;
+}
+
+#menuToggle:checked~.l {
+    left: 50px;
+}
+
+.l:hover {
+    padding-left: 50px;
+}
+
+#l1 {
+    transition: left 0.5s, padding-left 0.6s;
+    top: 120px;
+}
+
+#l2 {
+    transition: left 0.6s, padding-left 0.6s;
+    top: 200px;
+}
+
+#l3 {
+    transition: left 0.7s, padding-left 0.6s;
+    top: 280px;
+}
+
+#l4 {
+    transition: left 0.8s, padding-left 0.6s;
+    top: 360px;
+}
+
+#contactLink {
+    font-size: 1em;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 6;
+    color: #fff;
+    background-color: #222a2f;
+    padding: 5px 15px 5px 15px;
+    border-bottom: 0px solid white;
+    transition: opacity 0.3s, right 0.5s;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+#contactLink:hover,
+#menu:hover {
+    opacity: 1;
+}
+
+#menuToggle:checked~#contactLink {
+    right: -200px;
+    opacity: 0;
+}
