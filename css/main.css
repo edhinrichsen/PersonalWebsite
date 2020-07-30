@@ -125,6 +125,14 @@ h4 {
     margin: 0;
 }
 
+h5 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
 #title {
     margin-top: 3.5em;
     text-align: center;
@@ -223,6 +231,7 @@ ul {
 .skill {
     display: inline-table;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 45px -30px black; */
     background-color: white;
     width: 250px;
     height: 180px;
@@ -240,6 +249,7 @@ ul {
 
 #resumeLink {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 45px -30px black; */
     outline: 0px solid white;
     margin: auto;
     width: 160px;
@@ -258,6 +268,34 @@ ul {
     margin-left: 10px;
     vertical-align: middle;
     display: inline-table;
+}
+
+.image {
+    box-shadow: 0 10px 45px -30px black;
+    border-width: 0;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+hr {
+    box-shadow: 0 10px 40px -40px black;
+    border-width: 0;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: -90px;
+    margin-bottom: 70px;
+}
+
+.spacer {
+    width: 100px;
+    height: 2px;
+    background-color: rgba(65, 27, 27, 0.3);
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border-radius: 2px;
 }
 
 
@@ -353,6 +391,12 @@ html .clearfix::after {
         margin: auto;
         width: 600px;
         text-align: justify;
+    }
+    hr {
+        width: 650px;
+    }
+    .image {
+        width: 500px;
     }
     #title {
         margin-top: 25vh;
