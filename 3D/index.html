@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://preview.babylonjs.com/ammo.js"></script>
+        <script src="https://preview.babylonjs.com/cannon.js"></script>
+        <script src="https://preview.babylonjs.com/Oimo.js"></script>
+        <script src="https://preview.babylonjs.com/libktx.js"></script>
+        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+    </head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
+        
+var createCamera = function (scene) {
+    var camera = new BABYLON.ArcRotateCamera(
+        "Camera", 0,
+        Math.PI /2.25, 5,
+        new BABYLON.Vector3(0,1,0), scene
+    );
+	camera.attachControl(canvas, true);
+    camera.minZ = 0.1;
+    camera.wheelPrecision = 100000;
+
+    camera.attachControl(canvas, true);
+};
+
+var createSnow = function (scene) {
+    var json = {"name":"CPU particle system","id":"default system","capacity":10000,"emitterId":"emiter","particleEmitterType":{"type":"MeshParticleEmitter","direction1":[0,1,0],"direction2":[0,1,0],"meshId":"emiter","useMeshNormalsForDirection":true},"texture":{"tags":null,"url":"https://www.babylonjs.com/assets/Flare.png","uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"uRotationCenter":0.5,"vRotationCenter":0.5,"wRotationCenter":0.5,"isBlocking":true,"uniqueId":2681,"name":"https://www.babylonjs.com/assets/Flare.png","hasAlpha":false,"getAlphaFromRGB":false,"level":1,"coordinatesIndex":0,"coordinatesMode":0,"wrapU":1,"wrapV":1,"wrapR":1,"anisotropicFilteringLevel":4,"isCube":false,"is3D":false,"is2DArray":false,"gammaSpace":true,"invertZ":false,"lodLevelInAlpha":false,"lodGenerationOffset":0,"lodGenerationScale":0,"linearSpecularLOD":false,"isRenderTarget":false,"animations":[],"invertY":true,"samplingMode":3},"isLocal":false,"animations":[],"beginAnimationOnStart":false,"beginAnimationFrom":0,"beginAnimationTo":60,"beginAnimationLoop":false,"startDelay":0,"renderingGroupId":0,"isBillboardBased":true,"billboardMode":7,"minAngularSpeed":0,"maxAngularSpeed":0,"minSize":0.04,"maxSize":0.05,"minScaleX":0.9,"maxScaleX":1,"minScaleY":0.9,"maxScaleY":1,"minEmitPower":2,"maxEmitPower":2,"minLifeTime":1,"maxLifeTime":1,"emitRate":1000,"gravity":[0,0,0],"noiseStrength":[10,10,10],"color1":[1,1,1,1],"color2":[1,1,1,1],"colorDead":[1,1,1,1],"updateSpeed":0.0005,"targetStopDuration":0,"blendMode":0,"preWarmCycles":0,"preWarmStepOffset":1,"minInitialRotation":0,"maxInitialRotation":0,"startSpriteCellID":0,"endSpriteCellID":0,"spriteCellChangeSpeed":1,"spriteCellWidth":0,"spriteCellHeight":0,"spriteRandomStartCell":false,"isAnimationSheetEnabled":false,"colorGradients":[{"gradient":0,"color1":[0,0,0,1],"color2":[0,0,0,1]},{"gradient":0.1,"color1":[1,1,1,1],"color2":[1,1,1,1]},{"gradient":0.9,"color1":[1,1,1,1],"color2":[1,1,1,1]},{"gradient":1,"color1":[0,0,0,1],"color2":[0,0,0,1]}],"dragGradients":[],"emitRateGradients":[],"textureMask":[1,1,1,1],"customShader":null,"preventAutoStart":false};
+    var system = BABYLON.ParticleSystem.Parse(json, scene, "");
+};
+
+var glassMaterial = function (tex){
+    var glass = new BABYLON.PBRMaterial("glass", scene);
+    glass.linkRefractionWithTransparency = false;
+    glass.indexOfRefraction = 0.52;
+    glass.alpha = 0.2;
+    glass.environmentIntensity = 0.8;
+    glass.cameraExposure = 0.66;
+    glass.cameraContrast = 1.66;
+    glass.reflectionTexture = tex;
+    glass.microSurface = 1;
+    glass.reflectivityColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+    glass.albedoColor = new BABYLON.Color3(0.95, 0.95, 0.95);
+    glass.refractionTexture = tex;
+
+    return glass;
+};
+
+var snowMaterial = function (tex){
+    var snow = new BABYLON.PBRMaterial("snow", scene);
+
+    // scene.enablePrePassRenderer().subSurfaceConfiguration.metersPerUnit = 0.01;
+    // snow.subSurface.isScatteringEnabled = true;
+    snow.metallic = 0;
+    snow.roughness = 0.3;
+    snow.reflectionTexture = tex;
+    snow.bumpTexture = new BABYLON.Texture("https://www.babylonjs-playground.com/textures/grassn.png", scene);
+    // snow.albedoColor.copyFromFloats(102 / 255, 180 / 255, 20 / 255);
+    // scene.debugLayer.select(mainMesh.material, "SUBSURFACE");
+    // scene.enablePrePassRenderer().samples = 8;
+    snow.albedoColor = new BABYLON.Color3(0.85, 1, 1);
+
+    return snow;
+};
+
+var fabricMaterial = function (tex){
+    var fabric = new BABYLON.PBRMaterial("fabric", scene);
+    fabric.metallic = 0.0;
+    fabric.roughness = 0.5;
+    fabric.albedoColor = new BABYLON.Color3(0.88, 0.15, 0);
+    fabric.sheen.isEnabled = true;
+    fabric.sheen.texture = tex;
+
+    return fabric;
+};
+
+var metallicMaterial = function (tex){
+    var metallic = new BABYLON.PBRMetallicRoughnessMaterial("pbr", scene);
+    metallic.environmentTexture = tex;
+    metallic.baseColor = new BABYLON.Color3(0.7, 0.7, 0.7);
+    metallic.metallic = 1;
+    metallic.roughness = 0.2;
+    
+    return metallic;
+};
+
+var createScene = function () {
+    
+    var scene = new BABYLON.Scene(engine);
+    var light = new BABYLON.HemisphericLight(
+        "light",
+        new BABYLON.Vector3(0, 1, 0),
+        scene
+    );
+    light.intensity = 1;
+    createCamera();
+
+    BABYLON.SceneLoader.ImportMesh(
+        "",
+        "https://raw.githubusercontent.com/edhinrichsen/PersonalWebsite/master/3D/",
+        "snow.glb",
+        scene,
+        function(newMeshes){
+            var tex = BABYLON.CubeTexture.CreateFromPrefilteredData(
+                "https://www.babylonjs-playground.com/textures/environment.dds",
+                scene
+            );
+
+            var bace = newMeshes[0].getChildMeshes()[0];
+            var glass = newMeshes[0].getChildMeshes()[1];
+            var snow = newMeshes[0].getChildMeshes()[2];
+            var emitter = newMeshes[0].getChildMeshes()[3];
+            var scarf = newMeshes[0].getChildMeshes()[4];
+
+            bace.material = metallicMaterial(tex);
+            glass.material = glassMaterial(tex);
+            snow.material = snowMaterial(tex);
+            emitter.visibility = 0;
+            scarf.material = fabricMaterial(tex);
+
+            createSnow(scene);
+
+            var scarfEnd0 = scarf.morphTargetManager.getTarget(0);
+            var scarfEnd1 = scarf.morphTargetManager.getTarget(1);
+            var angle = 0;
+            scene.registerBeforeRender(function() {
+                scarfEnd0.influence = Math.sin(angle)*Math.sin(angle);
+                scarfEnd1.influence = Math.sin(angle)*Math.sin(angle);
+                angle += 0.02;
+            });
+    }); 
+
+    return scene;
+};
+    var engine;
+    try {
+    engine = createDefaultEngine();
+    } catch(e) {
+    console.log("the available createEngine function failed. Creating the default engine instead");
+    engine = createDefaultEngine();
+    }
+        if (!engine) throw 'engine should not be null.';
+        scene = createScene();;
+        sceneToRender = scene
+
+        engine.runRenderLoop(function () {
+            if (sceneToRender) {
+                sceneToRender.render();
+            }
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>

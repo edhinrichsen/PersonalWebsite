@@ -27,19 +27,21 @@
 <body>
     <input id="menuToggle" type="checkbox">
     <div id="menu"></div>
-    <div id="l1" class="l"><a href="#aboutMe" onclick="closeMenu()">About Me</a></div>
-    <div id="l2" class="l"><a href="#mySkills" onclick="closeMenu()">My Skills</a></div>
-    <div id="l3" class="l"><a href="#myProjects" onclick="closeMenu()">My Projects</a></div>
-    <div id="l4" class="l"><a href="#contact" onclick="closeMenu()">Contact Me</a></div>
+    <div id="l1" class="l"><a href="#home" onclick="closeMenu()">Home</a></div>
+    <div id="l2" class="l"><a href="#aboutMe" onclick="closeMenu()">About Me</a></div>
+    <div id="l3" class="l"><a href="#mySkills" onclick="closeMenu()">My Skills</a></div>
+    <div id="l4" class="l"><a href="#myProjects" onclick="closeMenu()">My Projects</a></div>
+    <div id="l5" class="l"><a href="#contact" onclick="closeMenu()">Contact Me</a></div>
     <div id="menuButtons">
         <img height="100%" style="cursor: pointer;" onclick="toggleMenu()" src="img/menu-icon.svg" alt="Menu" title="Menu">
         <a href="EdwardHinrichsen-Resume-Jul2020.pdf"><img height="100%" src="img/r-icon.svg" alt="Resume" title="Resume"></a>
         <a href="https://github.com/edhinrichsen"><img height="100%" src="img/git-icon.svg" alt="GitHub" title="GitHub"></a>
+        <a href="https://www.linkedin.com/in/edward-hinrichsen-731b671b4/"><img height="100%" src="img/linkedin-icon.svg" alt="Linkedin" title="Linkedin"></a>
     </div>
 
     <div id="contactLink"><a href="#contact">contact</a></div>
     <div id="landing">
-        <div id="topImage"></div>
+        <div id="home"></div>
         <div id="title">
             <h2>Hi there, I’m</h2>
             <h1>Edward</h1>
@@ -52,9 +54,11 @@
     <div id="content">
         <h1 id="aboutMe">Hi there,</h1>
         <p>
-            my name is Edward and I am currently studying a Bachelor of Science, majoring in Computer Science at the University of Melbourne. I have a passion for all things technology, from software engineering & algorithms to machine learning & data science. </p>
+            my name is Edward and I am currently studying a Bachelor of Science, majoring in Computer Science at the University of Melbourne. I have a passion for all things technology and design, from software engineering & algorithms to 3D graphics & extended reality (XR).
+        </p>
         <p>
-            In addition to my love of technology, I am also interested in design, 3D graphics, politics, economics and education. When not studying or coding, I am in the pool helping kids with autism spectrum disorder and other disabilities learn to swim. </p>
+            In addition to my love of technology and design, I am also interested in education, history, economics and politics. When not studying or coding, I am in the pool helping kids with autism spectrum disorder and other abilities learn to swim.
+        </p>
         <br><br>
         <div id="resumeLink">
             <a href="EdwardHinrichsen-Resume-Jul2020.pdf"><img style="display:inline-table" width="64px" src="img/r-icon.svg" alt="Resume" title="Resume">
@@ -67,9 +71,26 @@
         </p>
         <hr>
         <h1 id="mySkills">My Skills</h1>
-        <p>I am experienced in coding and programming in a range of languages and disciplines, including scripting & data analyses in Python and algorithmic programing in C. I also have the ability to analyse complex problem domains, constructing models
-            and solutions and then implementing them in Java and other object oriented languages.</p>
+        <p>
+            I am experienced in coding and programming in a range of languages and disciplines, including full stack web development with HTML, CSS & JavaScript and graphics/XR programming with Babylon.js, Unity & Unreal Engine.
+        </p>
         <div id=skillSet>
+            <div class="skill">
+                <h4>3D & XR</h4>
+                <ul>
+                    <li>Web3D & WebXR with Babylon.js</li>
+                    <li>Building for Vive, Daydream and Cardboard</li>
+                    <li>Unity & Unreal Engine</li>
+                    
+                </ul>
+            </div>
+            <div class="skill">
+                <h4>HTML, CSS & JavaScript</h4>
+                <ul>
+                    <li>Website Design & Development</li>
+                    <li>Web Scripting</li>
+                </ul>
+            </div>
             <div class="skill">
                 <h4>Python</h4>
                 <ul>
@@ -97,6 +118,13 @@
                 </ul>
             </div>
             <div class="skill">
+                <h4>3D Graphics</h4>
+                <ul>
+                    <li>Blender: Modeling, Texturing, Lighting & Rendering</li>
+                    <li>Rhinoceros 3D: NURB modeling & Parametric Design</li>
+                </ul>
+            </div>
+            <div class="skill">
                 <h4>MySQL</h4>
                 <ul>
                     <li>SQL Queries</li>
@@ -111,24 +139,10 @@
                 </ul>
             </div>
             <div class="skill">
-                <h4>HTML, CSS & JavaScript</h4>
-                <ul>
-                    <li>Website Design & Development</li>
-                    <li>Web Scripting</li>
-                </ul>
-            </div>
-            <div class="skill">
                 <h4>Linux</h4>
                 <ul>
                     <li>Experience with Debian Based Systems & Unix Shell (Bash)</li>
                     <li>Use Linux as my Main System (Elementary OS)</li>
-                </ul>
-            </div>
-            <div class="skill">
-                <h4>3D Graphics</h4>
-                <ul>
-                    <li>Blender: Modeling, Texturing, Lighting & Rendering</li>
-                    <li>Rhinoceros 3D: NURB modeling & Parametric Design</li>
                 </ul>
             </div>
             <div class="skill">
@@ -152,6 +166,13 @@
 
         </p>
         <div class="image"><img src="img/glyph2.png" width="100%" alt=""></div>
+        <div class="spacer"></div>
+
+        <h5>2020</h5>
+        <p>Below is a small Babylon.js project, I completed it as a proof of concept and exploration of the new PBR materials introduced in 3.0.0-alpha. It also makes use of the Babylon.js animation and particle system.  
+
+        </p>
+        <div class="image"><iframe width="100%" height="280" src="https://www.youtube.com/embed/LvVK7j2WmfU?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div class="spacer"></div>
 
         <h5>2019</h5>
@@ -198,7 +219,12 @@
         <br><br>
         <h1 id="contact">Contact</h1>
         <p style="text-align: center">email: <b>edward.w.hinrichsen@gmail.com</b></p>
-        <br><br><br><br><br>COPYRIGHT © 2020 Edward Hinrichsen<br><br><br>
+        <a href="EdwardHinrichsen-Resume-Jul2020.pdf"><img height="48px" src="img/r-icon.svg" alt="Resume" title="Resume"></a>
+        &ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;
+        <a href="https://github.com/edhinrichsen"><img height="48px" src="img/git-icon.svg" alt="GitHub" title="GitHub"></a>
+        &ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;
+        <a href="https://www.linkedin.com/in/edward-hinrichsen-731b671b4/"><img height="48px" src="img/linkedin-icon.svg" alt="Linkedin" title="Linkedin"></a>
+        <br><br><br><br><br>COPYRIGHT © 2021 Edward Hinrichsen<br><br><br>
     </div>
 
 

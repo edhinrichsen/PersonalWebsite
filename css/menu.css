@@ -28,11 +28,17 @@
     opacity: 0.7;
     transition: opacity 0.3s, height 0.7s, width 0.7s, left 0.3s, top 0.3s;
     height: 32px;
-    width: 150px;
+    width: 235px;
+    filter: brightness(1.5) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3))  drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
 }
 
 #menuButtons img {
-    margin-right: 10%;
+    margin-right: 7%;
+    transition: transform 0.3s;
+}
+#menuButtons img:hover {
+    /* margin-right: 14%; */
+    transform: scale(1.2);
 }
 
 #menuButtons:hover {
@@ -107,19 +113,29 @@
     top: 360px;
 }
 
+#l5 {
+    transition: left 0.9s, padding-left 0.6s;
+    top: 440px;
+}
+
 #contactLink {
     font-size: 1em;
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 6;
-    color: #fff;
-    background-color: #222a2f;
+    background-color:#222a2f;
+    color:  #fff;
     padding: 5px 15px 5px 15px;
     border-bottom: 0px solid white;
-    transition: opacity 0.3s, right 0.5s;
+    transition: opacity 0.3s, right 0.5s, transform 0.3s;
     border-radius: 20px;
+    filter: brightness(1.5) drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3))  drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
     opacity: 0.7;
+}
+
+#contactLink:hover {
+    transform: scale(1.2);
 }
 
 #contactLink:hover,

@@ -72,6 +72,7 @@ img,
 svg,
 video {
     vertical-align: middle;
+    border: 0px;
 }
 
 
@@ -154,7 +155,7 @@ h5 {
     z-index: -1;
 }
 
-#topImage {
+#home {
     /* margin-top: 100px; */
     position: absolute;
     top: 12em;
@@ -218,7 +219,10 @@ p,
     margin: auto;
     width: auto;
     text-align: justify;
+    border-radius: 5px;
+   
 }
+
 
 ul {
     margin-left: -10px;
@@ -238,7 +242,13 @@ ul {
     margin: 10px;
     text-align: left;
     outline: 0px solid white;
+    transition: all 0.3s;
 }
+
+/* .skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+} */
 
 #skillSet {
     /* background-color: wheat; */
@@ -256,12 +266,14 @@ ul {
     padding: 10px;
     text-align: left;
     font-size: 2em;
-    transition: box-shadow 0.3s, outline 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border-radius: 5px;
 }
 
 #resumeLink:hover {
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
-    outline: 2px solid white;
+    /* outline: 2px solid white; */
+    transform: scale(1.1);
 }
 
 #resumeLinkText {
@@ -403,7 +415,7 @@ html .clearfix::after {
         margin-left: 25vw;
         /*background-color: #b3d4fc;*/
     }
-    #topImage {
+    #home {
         top: 0;
         left: 0;
         right: 0;
@@ -419,6 +431,7 @@ html .clearfix::after {
         bottom: auto;
         right: 0;
     }
+    
 }
 
 @media only screen and (min-width: 992px) and (orientation: landscape) {
@@ -444,6 +457,11 @@ html .clearfix::after {
         bottom: auto;
         right: 0;
     }
+    .skill:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    }
+    
 }
 
 @media print,
