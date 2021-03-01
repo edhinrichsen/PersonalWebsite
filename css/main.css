@@ -1,8 +1,6 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -10,19 +8,17 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-    color: #222A2F;
-    font-size: 1em;
-    line-height: 1.4;
-    min-height: 101%;
-    min-width: 320px;
+  color: #222a2f;
+  font-size: 1em;
+  line-height: 1.4;
+  min-height: 101%;
+  min-width: 320px;
 }
-
 
 /*
  * Remove text-shadow in selection highlight:
@@ -35,29 +31,27 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
-
 
 /*
  * A better looking default horizontal rule
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
-
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -71,178 +65,174 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
-    border: 0px;
+  vertical-align: middle;
+  border: 0px;
 }
-
 
 /*
  * Remove default fieldset styles.
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 3.5em;
-    margin-top: -0.5em;
-    margin-bottom: -0.3em;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 3.5em;
+  margin-top: -0.5em;
+  margin-bottom: -0.3em;
 }
 
 h2 {
-    font-size: 1.5em;
-    font-weight: normal;
-    /* margin-bottom: -2em; */
+  font-size: 1.5em;
+  font-weight: normal;
+  /* margin-bottom: -2em; */
 }
 
 h3 {
-    font-size: 1em;
-    font-weight: normal;
+  font-size: 1em;
+  font-weight: normal;
 }
 
 h4 {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin: 0;
 }
 
 h5 {
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    margin: 0;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin: 0;
 }
 
 #title {
-    margin-top: 3.5em;
-    text-align: center;
-    color: white;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    /*background-color: #b3d4fc;*/
+  margin-top: 3.5em;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  /*background-color: #b3d4fc;*/
 }
 
 #landing {
-    /* margin-top: 100px; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #222a2f;
-    /* background-size: contain;
+  /* margin-top: 100px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222a2f;
+  /* background-size: contain;
   background-position: left bottom; */
-    z-index: -1;
+  z-index: -1;
 }
 
 #home {
-    /* margin-top: 100px; */
-    position: absolute;
-    top: 12em;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-image: url(../img/ed.png);
-    background-color: #222a2f;
-    background-size: contain;
-    background-position: center bottom;
-    z-index: -1;
+  /* margin-top: 100px; */
+  position: absolute;
+  top: 12em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/ed.png);
+  background-color: #222a2f;
+  background-size: contain;
+  background-position: center bottom;
+  z-index: -1;
 }
 
 #content {
-    position: relative;
-    margin-top: 100vh;
-    padding-top: 50px;
-    text-align: center;
-    font-size: 0.5em;
+  position: relative;
+  margin-top: 100vh;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 0.5em;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    outline: 0;
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
 }
 
 #scrollDown {
-    padding: 0;
-    text-align: center;
-    animation: scrollDownAni 5s ease infinite;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px;
+  padding: 0;
+  text-align: center;
+  animation: scrollDownAni 5s ease infinite;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
 }
 
 @keyframes scrollDownAni {
-    0% {
-        opacity: 0.5;
-        padding-bottom: 0px;
-        padding-top: 5px;
-    }
-    50% {
-        opacity: 1;
-        padding-bottom: 5px;
-        padding-top: 0px;
-    }
-    100% {
-        opacity: 0.5;
-        padding-bottom: 0px;
-        padding-top: 5px;
-    }
+  0% {
+    opacity: 0.5;
+    padding-bottom: 0px;
+    padding-top: 5px;
+  }
+  50% {
+    opacity: 1;
+    padding-bottom: 5px;
+    padding-top: 0px;
+  }
+  100% {
+    opacity: 0.5;
+    padding-bottom: 0px;
+    padding-top: 5px;
+  }
 }
 
 p,
 .skill {
-    font-size: 2em;
-    padding: 20px;
-    margin: auto;
-    width: auto;
-    text-align: justify;
-    border-radius: 5px;
-   
+  font-size: 2em;
+  padding: 20px;
+  margin: auto;
+  width: auto;
+  text-align: justify;
+  border-radius: 5px;
 }
 
-
 ul {
-    margin-left: -10px;
+  margin-left: -10px;
 }
 
 .lessImportant {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .skill {
-    display: inline-table;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-    /* box-shadow: 0 10px 45px -30px black; */
-    background-color: white;
-    width: 250px;
-    height: 180px;
-    margin: 10px;
-    text-align: left;
-    outline: 0px solid white;
-    transition: all 0.3s;
+  display: inline-table;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 10px 45px -30px black; */
+  background-color: white;
+  width: 250px;
+  height: 180px;
+  margin: 10px;
+  text-align: left;
+  outline: 0px solid white;
+  transition: all 0.3s;
 }
 
 /* .skill:hover {
@@ -251,70 +241,68 @@ ul {
 } */
 
 #skillSet {
-    /* background-color: wheat; */
-    margin: auto;
-    margin-top: 40px;
-    max-width: 1000px;
+  /* background-color: wheat; */
+  margin: auto;
+  margin-top: 40px;
+  max-width: 1000px;
 }
 
 #resumeLink {
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-    /* box-shadow: 0 10px 45px -30px black; */
-    outline: 0px solid white;
-    margin: auto;
-    width: 160px;
-    padding: 10px;
-    text-align: left;
-    font-size: 2em;
-    transition: box-shadow 0.3s, transform 0.3s;
-    border-radius: 5px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 10px 45px -30px black; */
+  outline: 0px solid white;
+  margin: auto;
+  width: 160px;
+  padding: 10px;
+  text-align: left;
+  font-size: 2em;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 5px;
 }
 
 #resumeLink:hover {
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
-    /* outline: 2px solid white; */
-    transform: scale(1.1);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  /* outline: 2px solid white; */
+  transform: scale(1.1);
 }
 
 #resumeLinkText {
-    margin-left: 10px;
-    vertical-align: middle;
-    display: inline-table;
+  margin-left: 10px;
+  vertical-align: middle;
+  display: inline-table;
 }
 
 .image {
-    box-shadow: 0 10px 45px -30px black;
-    border-width: 0;
-    padding: 10px;
-    width: 90%;
-    margin: auto;
+  box-shadow: 0 10px 45px -30px black;
+  border-width: 0;
+  padding: 10px;
+  width: 90%;
+  margin: auto;
 }
 
 hr {
-    box-shadow: 0 10px 40px -40px black;
-    border-width: 0;
-    width: 90%;
-    margin: auto;
-    height: 100px;
-    margin-top: -90px;
-    margin-bottom: 70px;
+  box-shadow: 0 10px 40px -40px black;
+  border-width: 0;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: -90px;
+  margin-bottom: 70px;
 }
 
 .spacer {
-    width: 100px;
-    height: 2px;
-    background-color: rgba(65, 27, 27, 0.3);
-    margin: auto;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    border-radius: 2px;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(65, 27, 27, 0.3);
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-radius: 2px;
 }
-
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 
 /*
  * Hide visually and from screen readers
@@ -322,9 +310,8 @@ hr {
 
 .hidden,
 [hidden] {
-    display: none !important;
+  display: none !important;
 }
-
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -336,18 +323,17 @@ hr {
  */
 
 .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
 }
-
 
 /*
  * Extends the .sr-only class to allow the element
@@ -357,24 +343,22 @@ hr {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
-
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
-
 
 /*
  * Clearfix: contain floats
@@ -390,87 +374,84 @@ hr {
 
 .clearfix::before,
 .clearfix::after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 html .clearfix::after {
-    clear: both;
+  clear: both;
 }
 
 @media only screen and (min-width: 650px) and (orientation: landscape) {
-    p {
-        margin: auto;
-        width: 600px;
-        text-align: justify;
-    }
-    hr {
-        width: 650px;
-    }
-    .image {
-        width: 500px;
-    }
-    #title {
-        margin-top: 25vh;
-        margin-left: 25vw;
-        /*background-color: #b3d4fc;*/
-    }
-    #home {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-position: left bottom;
-        z-index: -1;
-    }
-    #scrollDown {
-        position: absolute;
-        margin-top: 10em;
-        top: 25vh;
-        left: 25vw;
-        bottom: auto;
-        right: 0;
-    }
-    
+  p {
+    margin: auto;
+    width: 600px;
+    text-align: justify;
+  }
+  hr {
+    width: 650px;
+  }
+  .image {
+    width: 500px;
+  }
+  #title {
+    margin-top: 25vh;
+    margin-left: 25vw;
+    /*background-color: #b3d4fc;*/
+  }
+  #home {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: left bottom;
+    z-index: -1;
+  }
+  #scrollDown {
+    position: absolute;
+    margin-top: 10em;
+    top: 25vh;
+    left: 25vw;
+    bottom: auto;
+    right: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) and (orientation: landscape) {
-    h1 {
-        font-size: 7em;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    h3 {
-        font-size: 1.5em;
-    }
-    #title {
-        margin-top: 25vh;
-        margin-left: 25vw;
-        /*background-color: #b3d4fc;*/
-    }
-    #scrollDown {
-        position: absolute;
-        margin-top: 15em;
-        top: 25vh;
-        left: 25vw;
-        bottom: auto;
-        right: 0;
-    }
-    .skill:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
-    }
-    
+  h1 {
+    font-size: 7em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  #title {
+    margin-top: 25vh;
+    margin-left: 25vw;
+    /*background-color: #b3d4fc;*/
+  }
+  #scrollDown {
+    position: absolute;
+    margin-top: 15em;
+    top: 25vh;
+    left: 25vw;
+    bottom: auto;
+    right: 0;
+  }
+  .skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
-
 
 /* ==========================================================================
    Print styles.
@@ -479,60 +460,60 @@ html .clearfix::after {
    ========================================================================== */
 
 @media print {
-    *,
-    *::before,
-    *::after {
-        background: #fff !important;
-        color: #000 !important;
-        /* Black prints faster */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]::after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]::after {
-        content: " (" attr(title) ")";
-    }
-    /*
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
